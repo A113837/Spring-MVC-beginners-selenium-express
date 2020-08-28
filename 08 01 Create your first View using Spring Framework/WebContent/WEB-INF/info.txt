@@ -1,0 +1,2 @@
+add view folder
+add MRFCricketbat.jsp
