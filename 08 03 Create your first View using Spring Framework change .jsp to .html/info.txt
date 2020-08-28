@@ -1,0 +1,11 @@
+@Controller
+public class BroController {
+	
+	//@ResponseBody
+	@RequestMapping("/cricketbat")
+	public String giveCricketBat()
+	{
+		return "/META-INF/view/MRFCricketbat.html";
+	}
+
+}
