@@ -1,0 +1,20 @@
+@Controller
+@RequestMapping("/sis")
+public class SisController {
+	
+	@ResponseBody
+	@RequestMapping("/makeup")
+	public String getMakeupKit()
+	{
+		return "please take my makeup kit";
+	}
+	
+	@ResponseBody
+	@RequestMapping("/book")
+	public String getBook()
+	{
+		System.out.println("getbook() method");
+		return "Math book";
+	}
+
+}
