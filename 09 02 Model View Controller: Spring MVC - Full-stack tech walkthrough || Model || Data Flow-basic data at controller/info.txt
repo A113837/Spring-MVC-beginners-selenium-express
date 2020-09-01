@@ -1,0 +1,14 @@
+@Controller
+public class MyCafeControllers {
+	
+	@RequestMapping("/cafe")
+	public String showWelcomePage(Model model) 
+	{
+		//sending data to view (jsp page)
+		String myName = " John Abhilash";
+		
+		model.addAttribute("myNameValue", myName);
+		return "welcom-page";
+	}
+
+}
