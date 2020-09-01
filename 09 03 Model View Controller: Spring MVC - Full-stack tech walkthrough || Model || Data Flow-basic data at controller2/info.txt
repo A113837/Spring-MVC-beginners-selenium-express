@@ -1,0 +1,27 @@
+@Controller
+public class MyCafeControllers {
+	
+	@RequestMapping("/cafe")
+	public String showWelcomePage(Model model) 
+	{
+		//sending data to view (jsp page)
+		String myName = " John Abhilash";
+		
+		model.addAttribute("myNameValue", myName);
+		model.addAttribute("myWebsiteTitle", "JOHN's CAFE");
+		return "welcom-page";
+	}
+
+}
+
+<form action="processOrder">
+	<div align="center">
+		<h1 align="center">${myWebsiteTitle}</h1>
+		<hr>
+		<label for="item_name">Item Name: </label> 
+		<input type="text"
+			name="foodType" placeholder="Food Type" id="item_name"> 
+		<input
+			type="submit" value="order now">
+	</div>
+</form>
