@@ -1,0 +1,36 @@
+	@RequestMapping("/processOrder")
+	public String processOrder(HttpServletRequest request, Model model)
+	{
+		//handle data receive from the user
+		String userEnterValue = request.getParameter("foodType");
+		
+		//adding the captured value to the model
+		model.addAttribute("userInput", userEnterValue );
+		
+		//set the user data with the model object and send it to view	
+		return "process-order";
+	}
+
+
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+span{
+color: red;
+font-family: Arial;
+}
+
+</style>
+<meta charset="ISO-8859-1">
+<title>Order</title>
+</head>
+<body>
+<h1>Order Received</h1>
+Your order <span>${userInput}</span> is getting processed..
+
+
+</body>
+</html>
